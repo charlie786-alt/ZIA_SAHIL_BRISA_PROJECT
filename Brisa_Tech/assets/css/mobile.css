@@ -1,0 +1,173 @@
+@media only screen and (max-width: 767px) {
+  .container {
+    min-width: 90%;
+  }
+  .navbar {
+    position: relative;
+  }
+  .hamburger__icons {
+    display: block;
+    z-index: 999;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  .navbar__link {
+    /* display: none;  no animation happens in display */
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 1px grey;
+    background-color: #fefcf7;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* to get the transition */
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .navbar__link > ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .navbar__link > ul > li:hover a {
+    border: 2px solid red;
+    border-radius: 6px;
+    padding: 6px;
+    transition: 0.6s ease-in-out;
+  }
+  .active .navbar__link {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .active .hamburger__icons .mobile__nav__icon[name="close"] {
+    display: block;
+  }
+  .active .hamburger__icons .mobile__nav__icon[name="open"] {
+    display: none;
+  }
+
+  /* banner code */
+
+  .banner__about {
+    z-index: -10;
+    background: url(../images/mobile/image-hero-whitecup.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+  }
+
+  .banner__about > .banner__about__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    text-align: center;
+    width: 86%;
+  }
+  .banner__about > .banner__about__text > .desktop__visible {
+    display: none;
+  }
+  .banner__about > .banner__about__text > .other__device__visible {
+    display: block;
+    font-family: "barlow-regular";
+    font-size: 15px;
+    line-height: 25px;
+    color: #fefcf7;
+  }
+  .banner__about {
+    position: relative;
+  }
+  .banner__about > .banner__about__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    text-align: center;
+  }
+  .banner__about > .banner__about__text > h2 {
+    font-size: 28px;
+    color: #fefcf7;
+  }
+  .banner__about > .banner__about__text > .other__device__visible {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  /* commitment */
+
+  .commitment {
+    flex-direction: column;
+  }
+  .commitment > .commitment__left__img {
+    background: url(../images/mobile/image-commitment.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    height: 400px;
+    width: 100%;
+  }
+  .commitment > .commitment__right__text {
+    width: 100%;
+    text-align: center;
+  }
+  .commitment > .commitment__right__text > h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #333d4b;
+    margin: 32px 0px 32px 0px;
+  }
+
+  /* quality section */
+
+  .quality > .quality__right__img img {
+    width: 100%;
+    height: 156px;
+  }
+
+  /* headquarter */
+
+  .headquarter {
+    text-align: center;
+  }
+  .headquarter > .headquarter__country {
+    flex-direction: column;
+  }
+  .headquarter__country h3 {
+    font-size: 28px;
+  }
+  .headquarter__country p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .headquarter > .headquarter__country > .headquarter__country__first,
+  .headquarter__country__second,
+  .headquarter__country__third {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-bottom: 70px;
+  }
+
+
+  /* footer  */
+
+
+  .foot__section > .footer__nav__menu > ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .foot__section > .footer__nav__menu > ul > li {
+    padding: 10px 0px;
+  }
+}

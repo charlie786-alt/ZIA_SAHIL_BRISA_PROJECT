@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  background-color: #f5f5f5;
+}
+/* predefined classes for better page layout */
+.container {
+  max-width: 90%;
+  margin: 0px auto;
+  padding: 0px 20px;
+  /* border-radius: 10px; */
+}
+
+
+/* importing required fonts */
+
+
+@font-face {
+  font-family: "barlow-bold-nav";
+  src: url(../fonts/Barlow/Barlow-Bold.ttf);
+}
+
+@font-face {
+  font-family: "barlow-regular";
+  src: url(../fonts/Barlow/Barlow-Light.ttf);
+}
+
+@font-face {
+  font-family: "fraunces-9pt";
+  src: url(../fonts/Fraunces/static/Fraunces_9pt/Fraunces_9pt-Regular.ttf);
+}
+@font-face {
+  font-family: "fraunces-9bold";
+  src: url(../fonts/Fraunces/static/Fraunces_9pt/Fraunces_9pt-Bold.ttf);
+}
+@font-face {
+  font-family: "fraunces-black";
+  src: url(../fonts/Fraunces/static/Fraunces_9pt/Fraunces_9pt-Black.ttf);
+}
+
+
+/* header */
+
+
+.navbar {
+  padding: 40px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar > .navbar__link > ul {
+  /* background-color: blanchedalmond; */
+  list-style-type: none;
+  display: flex;
+}
+.navbar > .navbar__link > ul > li {
+  padding: 4px 30px;
+}
+.navbar > .navbar__link > ul > li:last-child {
+  padding-right: 0;
+}
+.navbar > .navbar__link > ul > li > a {
+  text-decoration: none;
+  font-family: "barlow-bold-nav";
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.92px;
+  text-transform: uppercase;
+  color: #83888f;
+}
+
+.navbar > .navbar__link > ul > li:hover a {
+  color: rgb(116, 72, 72);
+  transition: 0.4s ease-in-out;
+}
+
+
+/* hamburger menu ocde */
+
+
+.hamburger__icons {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mobile__nav__icon[name="close"] {
+  display: none;
+}
+
+
+/* banner_about */
+
+
+.banner__about {
+  background: url(../images/desktop/image-hero-whitecup.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 450px;
+  position: relative;
+  border-radius: 10px;
+}
+.banner__about:before {
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 12%);
+  border-radius: 10px;
+}
+.banner__about > .banner__about__text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 7%;
+  max-width: 35%;
+}
+.banner__about > .banner__about__text > h2 {
+  font-family: "fraunces-black";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  color: #fefcf7;
+  margin-bottom: 24px;
+}
+.banner__about > .banner__about__text > .desktop__visible {
+  font-family: "barlow-regular";
+  font-size: 16px;
+  line-height: 26px;
+  color: #fefcf7;
+}
+.banner__about > .banner__about__text > .other__device__visible {
+  display: none;
+}
+
+/* commitment box */
+
+.commitment {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 120px 20px;
+}
+.commitment > .commitment__left__img {
+  background: url(../images/desktop/image-commitment.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  height: 520px;
+  width: 445px;
+}
+.commitment > .commitment__left__img > img {
+  height: 520px;
+  width: 445px;
+  border-radius: 8px;
+  margin-left: 4%;
+}
+.commitment > .commitment__right__text {
+  margin: 0px 40px;
+  width: 43%;
+}
+.commitment > .commitment__right__text > h2 {
+  font-family: "fraunces-black";
+  font-weight: 900;
+  font-size: 40px;
+  color: #333d4b;
+  margin-bottom: 32px;
+}
+.commitment > .commitment__right__text > .desktop__visible {
+  color: #333d4b;
+  font-family: "barlow-regular";
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.commitment > .commitment__right__text > .other__device__visible {
+  display: none;
+}
+
+/* quality section */
+
+.quality {
+  background-color: #2c343e;
+  height: 474px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin: 120px auto 100px;
+  position: relative;
+}
+.quality > .quality__left {
+  width: 43%;
+  padding-top: 8%;
+  margin-left: 4%;
+}
+.quality > .quality__left > h2 {
+  font-family: "fraunces-black";
+  font-size: 40px;
+  font-weight: 900;
+  color: #fefcf7;
+  margin-bottom: 32px;
+}
+.quality > .quality__left > .desktop__visible {
+  font-family: "barlow-regular";
+  font-size: 16px;
+  line-height: 26px;
+  color: #fefcf7;
+  font-weight: 400;
+}
+.quality > .quality__left > .other__device__visible {
+  display: none;
+}
+.quality > .quality__right__img {
+  position: relative;
+  top: -20%;
+  right: 6%;
+}
+.quality > .quality__right__img img {
+  height: 474px;
+  width: 445px;
+  border-radius: 8px;
+}
+
+/* headquarters */
+.headquarter {
+  padding: 0 0 20px;
+}
+
+.headquarter > h4 {
+  font-family: "fraunces-9pt";
+  font-size: 24px;
+  color: #83888f;
+}
+.headquarter__country {
+  padding: 50px 0px;
+  display: flex;
+  justify-content: flex-start;
+}
+.headquarter__country__first {
+  max-width: 37%;
+  flex-basis: 37%;
+}
+.headquarter__country__second {
+  max-width: 33%;
+  flex-basis: 33%;
+}
+.headquarter__country__third {
+  max-width: 30%;
+  flex-basis: 30%;
+}
+.headquarter__country h3 {
+  color: #333d4b;
+  font-size: 32px;
+  font-weight: 900;
+  font-family: "fraunces-black";
+  margin-bottom: 24px;
+}
+.headquarter__country p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #333d4b;
+}
+
+/* footer */
+.foot__section {
+  background-color: #2c343e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 60px;
+  margin: 20px auto 40px;
+}
+.foot__section > .footer__nav__menu > ul {
+  list-style-type: none;
+  display: flex;
+}
+.foot__section > .footer__nav__menu > ul > li {
+  padding: 4px 30px;
+}
+.foot__section > .footer__nav__menu > ul > li > a {
+  text-decoration: none;
+  font-family: "barlow-bold-nav";
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.92px;
+  text-transform: uppercase;
+  color: #83888f;
+}
+.foot__section > .footer__nav__menu > ul > li:hover a {
+  color: rgb(116, 72, 72);
+  transition: 0.4s ease-in-out;
+}
+.foot__section > .footer__icons > img {
+  padding: 0px 12px;
+}
+.foot__section > .footer__icons > img:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+  transition: 0.6s ease-in-out;
+  background-color: #2c343e;
+}
+.footer__white__img {
+  max-width: 30%;
+  flex-basis: 30%;
+}
+.footer__nav__menu {
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.footer__icons {
+  max-width: 20%;
+  flex-basis: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
